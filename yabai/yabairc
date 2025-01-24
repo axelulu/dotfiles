@@ -1,0 +1,88 @@
+# default layout (can be bsp, stack or float)
+#
+#
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+yabai -m config layout bsp
+
+# new window spawns to the right if vertical split, or bottom if horizontal split
+yabai -m config window_placement second_child
+
+# padding set to 12px
+yabai -m config top_padding 2
+yabai -m config bottom_padding 42
+yabai -m config left_padding 10
+yabai -m config right_padding 10
+yabai -m config window_gap 10
+
+yabai -m config external_bar all:40:0
+
+# center mouse on window with focus
+yabai -m config mouse_follows_focus          off
+# yabai -m config focus_follows_mouse          autofocus
+
+# modifier for clicking and dragging with mouse
+yabai -m config mouse_modifier alt
+# set modifier + left-click drag to move window
+yabai -m config mouse_action1 move
+# set modifier + right-click drag to resize window
+yabai -m config mouse_action2 resize
+
+yabai -m config window_animation_duration 0.50
+
+yabai -m config window_opacity_duration 0.25
+
+# when window is dropped in center of another window, swap them (on edges it will split it)
+# yabai -m mouse_drop_action swap
+
+# yabai -m config window_topmost              off
+yabai -m config window_opacity              on
+yabai -m config window_shadow               off
+# yabai -m config active_window_border        off
+
+yabai -m config active_window_opacity       0.98
+yabai -m config normal_window_opacity       0.90
+yabai -m config split_ratio                 0.50
+
+# Not to manage these apps
+yabai -m rule --add app="^(System Settings|系统设置)" manage=off
+yabai -m rule --add app="(System Information|关于本机)" manage=off
+yabai -m rule --add app="(Installer|安装器)" manage=off
+yabai -m rule --add app="(QQ)" manage=off grid=20:20:10:10:10:10
+yabai -m rule --add app="^(Mail|邮件)$" manage=off grid=20:20:0:2:18:18
+yabai -m rule --add app="微信" manage=off grid=20:20:0:0:18:18
+yabai -m rule --add app="微信" title="^(视频通话.*)$" manage=off
+yabai -m rule --add app="(照片|Photos)" manage=off grid=20:20:1:1:18:18
+yabai -m rule --add app="Downie 4" manage=off grid=20:20:15:1:2:18
+yabai -m rule --add app="Arc" manage=off grid=20:20:0:0:19:19
+yabai -m rule --add app="Obsidian" manage=off grid=20:20:1:1:19:19
+yabai -m rule --add app="^(Microsoft PowerPoint|Keynote.*)$" manage=off grid=20:20:1:1:18:18
+yabai -m rule --add app="^(.*zoom\.us.*)$" title="^(Zoom)$" manage=off
+yabai -m rule --add app="^(预览|Preview)$" manage=off
+yabai -m rule --add app="root\.exe" manage=off
+yabai -m rule --add app="python3" manage=off
+yabai -m rule --add app="(Music|音乐)" manage=off grid=20:20:1:1:16:16
+yabai -m rule --add app="(访达|Finder)" title!="拷贝" manage=off grid=20:20:1:1:18:18
+yabai -m rule --add app="^(Music|音乐)" manage=off
+yabai -m rule --add app="^(WebStorm)$" title="^(设置|将提交推送.*|重命名.*|删除.*|冲突.*|合并.*)$" manage=off
+yabai -m rule --add label="System Preferences" app="^System Preferences$" title=".*" manage=on
+yabai -m rule --add label="Raycast" app="^Raycast$" title=".*" manage=off
+yabai -m rule --add label="Firefox" app="^Firefox$" title="^Opening.*" manage=off
+yabai -m rule --add label="App Store" app="^App Store$" manage=off
+yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
+yabai -m rule --add label="Software Update" title="Software Update" manage=off
+yabai -m rule --add label="Bartended" app="Bartended" title=".*" manage=off
+yabai -m rule --add label="Gitify" app="Gitify" title=".*" manage=off sticky=on
+yabai -m rule --add title="^(Open|打开|Copy)$" manage=off
+yabai -m rule --add app=".*Microsoft.*" title="Open new and recent files" manage=off
+yabai -m rule --add app=".*Microsoft.*" title="^What's New.*" manage=off
+yabai -m rule --add app="^(Input Source Pro|The Unarchiver)$" manage=off
+yabai -m rule --add title="(Color Fill|Stroke Color)" manage=off
+yabai -m rule --add app="AdGuard for Safari" title="AdGuard for Safari - Settings" manage=off
+yabai -m rule --add app="Pixelmator Pro" title="(^$|Untitled)" manage=off
+yabai -m rule --add app="哔哩哔哩" title!="哔哩哔哩 \(゜-゜\)つロ 干杯~-bilibili" manage=off grid=20:20:1:1:18:18
+yabai -m rule --add app="哔哩哔哩" title="哔哩哔哩 \(゜-゜\)つロ 干杯~-bilibili" manage=off grid=20:20:0:0:18:18
+yabai -m rule --apply
+
+echo "yabai configuration loaded.."
