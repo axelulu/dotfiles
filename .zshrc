@@ -13,9 +13,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=0
 #THEME
 ZSH_THEME="robbyrussell"
 
-# Add deno completions to search path
-# if [[ ":$FPATH:" != *":/Users/axelu/.zsh/completions:"* ]]; then export FPATH="/Users/axelu/.zsh/completions:$FPATH"; fi
-
 #==========================================
 #                Extras                  #
 #=========================================
@@ -28,7 +25,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting z)
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-search expand-or-complete accept-line push-line-or-edit)
 
 # -> init External Scripts
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
@@ -111,7 +108,6 @@ git_custom() {
 ## -> Aliases
 
 alias src="source ~/.zshrc"
-alias cd="z"
 alias v="nvim"
 alias vim="nvim"
 alias clr="clear"
@@ -121,14 +117,14 @@ alias n="nnn"
 alias matrix="unimatrix -c blue -u 'Linux'"
 alias config="v ~/.zshrc"
 alias rm='rm_confirm'
-# alias git=git_custom
 alias monica="cd $HOME/Desktop/ButterflyEffect/monica/"
 alias net="gping www.google.com -c '#88C0D0,#B48EAD,#81A1C1,#8FBCBB'"
 alias tree="tre"
 alias gp='git pull'
 alias go='git pull origin'
 alias gb="sh ~/ZERO/SCRIPTS/git_branch.sh"
-alias gc="git commit"
+alias gc="git_custom commit"
+alias g_push="git_custom push"
 
 
 ## -> Exports
@@ -136,6 +132,9 @@ export EDITOR="$(which nvim)"
 export VISUAL="$(which nvim)"
 export MANPAGER="$(which nvim) +Man!"
 export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
 # Function to check terminal size
@@ -155,14 +154,3 @@ execute_if_terminal_size_bigger() {
 }
 
 check_terminal_size
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-. "/Users/axelu/.deno/env"
-
-# Initialize zsh completions (added by deno install script)
-autoload -Uz compinit
-compinit
-
-# Added by Windsurf
-export PATH="/Users/axelu/.codeium/windsurf/bin:$PATH"
