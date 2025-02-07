@@ -5,17 +5,15 @@ DOTS=$HOME/.config/
 #-------------------
 
 alias home="cd ~"
-alias dev='cd /Users/axelu/Dev'
+alias dev='cd $HOME/Dev'
 alias dots='cd $DOTS'
-alias scripts='cd ~/.scripts'
-alias paintserver='cd /Users/axelu/Dev/craftwork-rails/'
-alias craftwork='cd /Users/axelu/Dev/craftwork/'
-alias hyperdirmic='cd /Users/axelu/Dev/hyperdirmic/'
-alias hypertext='cd /Users/axelu/Dev/hypertext/'
-alias extensions='cd /Users/axelu/Dev/extensions/'
-alias r_dots='cd Users/axelu/Dev/extensions/edit-dotfiles/'
-alias r_yabai='cd /Users/axelu/Dev/extensions/raycast-yabai/'
-alias monica='cd $HOME/Desktop/ButterflyEffect/monica/'
+alias scripts='cd $DOTS/scripts'
+alias nodejs='cd $HOME/Dev/nodejs/'
+alias react='cd $HOME/Dev/react/'
+alias extensions='cd $HOME/Dev/extensions/'
+alias r_dots='cd $HOME/Dev/extensions/edit-dotfiles/'
+alias r_yabai='cd $HOME/Dev/extensions/raycast-yabai/'
+alias monica='cd $HOME/Dev/ButterflyEffect/monica/'
 
 #-------------------
 # Locations
@@ -69,8 +67,6 @@ alias lst='ls --tree --depth 2'
 alias s_zsh='source ~/.config/zsh/.zshrc'
 alias src="source ~/.zshrc"
 alias screen='screen -c ~/.config/screen/.screenrc'
-alias cd='z'
-alias stowconfig='cd ~/Dotfiles && stow --target=/Users/axelu/.config dot_config'
 alias lss="ya"
 alias n="nnn"
 alias net="gping www.google.com -c '#88C0D0,#B48EAD,#81A1C1,#8FBCBB'"
@@ -85,7 +81,7 @@ alias tree="tre"
 alias c='clear'
 alias h='history'
 alias x='exit'
-alias e="~/.scripts/nvim_wrapper.sh"
+alias e="~/.config/scripts/nvim_wrapper.sh"
 
 #-------------------
 # Git
@@ -110,12 +106,14 @@ alias gdc='git diff main | pbcopy && echo "Diff copied to clipboard."'
 # Scripts
 # ------------------
 
-alias resizeimage='~/.scripts/resize_image.sh'
-alias renamefiles='~/.scripts/rename_files.sh'
-alias openwork='~/.scripts/work_setup.sh'
-alias closework='~/.scripts/work_teardown.sh'
-alias optimize_images='~/.scripts/optimize_images.sh'
-alias convert_movs='~/.scripts/convert_mov_files.sh'
+alias resizeimage='~/.config/scripts/resize_image.sh'
+alias renamefiles='~/.config/scripts/rename_files.sh'
+alias openwork='~/.config/scripts/work_setup.sh'
+alias closework='~/.config/scripts/work_teardown.sh'
+alias optimize_images='~/.config/scripts/optimize_images.sh'
+alias convert_movs='~/.config/scripts/convert_mov_files.sh'
+alias nvim_wrapper='~/.config/scripts/nvim_wrapper.sh'
+alias luanch_yazi='~/.config/scripts/luanch_yazi.sh'
 
 #-------------------
 # Notes
