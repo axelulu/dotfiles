@@ -12,8 +12,8 @@ local Grey = "#0f1419"
 local LightGrey = "#191f26"
 
 local TAB_BAR_BG = "Black"
-local ACTIVE_TAB_BG = "Yellow"
-local ACTIVE_TAB_FG = "Black"
+local ACTIVE_TAB_BG = "#ff5c5c"
+local ACTIVE_TAB_FG = "White"
 local HOVER_TAB_BG = Grey
 local HOVER_TAB_FG = "White"
 local NORMAL_TAB_BG = LightGrey
