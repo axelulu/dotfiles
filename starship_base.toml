@@ -10,7 +10,7 @@ read_only = " "
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 truncation_length = 10
 truncate_to_repo = true                                # truncates directory to root folder if in github repo
-style = "italic #45b3e0"
+style = "italic #FF6699"
 
 [character]
 disabled = false

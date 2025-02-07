@@ -4,10 +4,10 @@ right_format = """$cmd_duration$battery$aws"""
 
 add_newline = true
 format = """
- [ 󰊠  ](bold italic #FFA500) \ 
+ [ 󰊠  ](bold italic #ff5c5c) \ 
  [](bg:#769ff0 fg:#769ff0)$directory\
  [](bold italic skyblue)$git_branch$python$golang$nodejs 
- [\n  ](#00FFFF)$character
+ [\n  ](#ff6699)$character
 """
 # ~/.config/starship.toml
 [directory.substitutions]
@@ -37,16 +37,16 @@ format = 'via [$symbol($version )]($style)'
 #
 # # Replace the "❯"
 [character]
-success_symbol = "[󰋇 ](#00FFFF)"
+success_symbol = "[󰋇 ](#ff6699)"
 error_symbol = "[󰒲 ](red)"
 #
 # # configure directory
 [directory]
 read_only = " "
-format = "[ ](#2687A2)[ $path]($style)[$lock_symbol]($lock_style )[ ](bold #2687A2) "
+format = "[ ](#ff5c5c)[ $path]($style)[$lock_symbol]($lock_style )[ ](bold #ff5c5c) "
 truncation_length = 10
 truncate_to_repo = true                                                                 # truncates directory to root folder if in github repo
-style = "italic fg:#e3e5e5 bg:#2687A2"
+style = "italic fg:#e3e5e5 bg:#ff5c5c"
 #
 [os]
 format = " ($style)"
@@ -67,7 +67,7 @@ style = "bold italic blue"
 symbol = "󱔎 "
 #pyenv_version_name = true
 format = 'via [${symbol}(${version}) ⥋ (\($virtualenv\))]($style) '
-style = "bold  #00C5FF"
+style = "bold  #8f6dff"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]

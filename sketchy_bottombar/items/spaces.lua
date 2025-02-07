@@ -122,7 +122,6 @@ local spaces_indicator = sbar.add("item", {
 })
 
 space_window_observer:subscribe("space_windows_change", function(env)
-  print("=============space_change===============", env.INFO.space, env.SID, env.SELECTED)
   local icon_line = ""
   local no_app = true
   for app, count in pairs(env.INFO.apps) do
