@@ -11,8 +11,6 @@ alias scripts='cd $DOTS/scripts'
 alias nodejs='cd $HOME/Dev/nodejs/'
 alias react='cd $HOME/Dev/react/'
 alias extensions='cd $HOME/Dev/extensions/'
-alias r_dots='cd $HOME/Dev/extensions/edit-dotfiles/'
-alias r_yabai='cd $HOME/Dev/extensions/raycast-yabai/'
 alias monica='cd $HOME/Dev/ButterflyEffect/monica/'
 
 #-------------------
@@ -106,14 +104,26 @@ alias gdc='git diff main | pbcopy && echo "Diff copied to clipboard."'
 # Scripts
 # ------------------
 
-alias resizeimage='~/.config/scripts/resize_image.sh'
+alias convert_movs='~/.config/scripts/convert_mov_files.sh'
+alias convert_nucleo_icons='~/.config/scripts/convert_nucleo_icons.sh'
+alias luanch_yazi='~/.config/scripts/luanch_yazi.sh'
+alias nvim_wrapper='~/.config/scripts/nvim_wrapper.sh'
+alias optimize_images='~/.config/scripts/optimize_images.sh'
+alias process_images_for_web='~/.config/scripts/process_images_for_web.sh'
 alias renamefiles='~/.config/scripts/rename_files.sh'
+alias resizeimage='~/.config/scripts/resize_image.sh'
+alias tmux_current_file='~/.config/scripts/tmux_current_file.sh'
+alias open_yazi='~/.config/scripts/open_yazi.sh'
 alias openwork='~/.config/scripts/work_setup.sh'
 alias closework='~/.config/scripts/work_teardown.sh'
-alias optimize_images='~/.config/scripts/optimize_images.sh'
-alias convert_movs='~/.config/scripts/convert_mov_files.sh'
-alias nvim_wrapper='~/.config/scripts/nvim_wrapper.sh'
-alias luanch_yazi='~/.config/scripts/luanch_yazi.sh'
+
+# windows
+alias focus_window='~/.config/scripts/windows/focus_window.sh'
+alias move_window_to_left='~/.config/scripts/windows/move_window_to_left.sh'
+alias move_window_to_right='~/.config/scripts/windows/move_window_to_right.sh'
+alias open_wezterm='~/.config/scripts/windows/open_wezterm.sh'
+alias taggle_show_hide_desktop='~/.config/scripts/windows/taggle_show_hide_desktop.sh'
+alias window_focus_on_destroy='~/.config/scripts/windows/window_focus_on_destroy.sh'
 
 #-------------------
 # Notes

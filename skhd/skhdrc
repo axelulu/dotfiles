@@ -131,4 +131,4 @@ lalt - s : yabai -m window --insert east;  skhd -k "cmd - n"
 lalt - v : yabai -m window --insert south; skhd -k "cmd - n"
 
 # Toggle sketchybar
-shift + lalt - space : sketchybar --bar hidden=toggle
+shift + lalt - space : sketchybar --bar hidden=toggle && sketchy_bottombar --bar hidden=toggle
