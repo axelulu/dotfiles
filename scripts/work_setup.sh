@@ -30,7 +30,15 @@ done
 for app space_index in "${(@kv)work_apps}"; do
   if [[ ! $open_apps[(r)$app] ]]; then
     echo "Opening $app"
-    open -a "$app" && sleep 1 && (
+    # 如果是 VS Code 则执行额外命令
+    if [[ "$app" == "Visual Studio Code" ]]; then
+        # 先执行code命令再打开应用
+        code ~/Dev/ButterflyEffect/monica
+    else
+        # 普通应用直接打开
+        open -a "$app"
+    fi
+    sleep 1 && (
       SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n ${SPACES[$space_index]} ]] && yabai -m window --space ${SPACES[$space_index]}
     )
   fi

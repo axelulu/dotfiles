@@ -17,8 +17,7 @@ alias monica='cd $HOME/Dev/ButterflyEffect/monica/'
 # Locations
 # ------------------
 
-alias drucialpi='ssh drucial@drucialpi.local'
-alias drucialserver='ssh drucial@drucialserver.local'
+alias axelupi='ssh axelu@axeludeMacBook-Pro.local'
 
 #-------------------
 # VNC
@@ -41,6 +40,8 @@ alias e_gitconfig='nvim ~/.gitconfig'
 alias e_starship='nvim ~/.config/starship/starship.toml'
 alias e_bat='nvim ~/.config/bat/config'
 alias e_yabai='nvim ~/.config/yabai/yabairc'
+alias e_config='code ~/.config'
+alias e_monica='code $HOME/Dev/ButterflyEffect/monica/'
 
 #-------------------
 # Shortcuts
@@ -145,3 +146,4 @@ alias updatealiascommand='update_alias_command'
 #-------------------
 # Generated Aliases
 #-------------------
+alias check_net_speed='~/.config/scripts/check_wifi_speed_gui.sh'
