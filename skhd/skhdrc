@@ -20,8 +20,8 @@ lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [
 # shift + cmd - tab : yabai -m space --focus prev
 
 # resize
-lalt - 0x18 : yabai -m window --resize top_right:-50:-50
-lalt - 0x1B : yabai -m window --resize top_right:50:50
+lalt - 0x1B : yabai -m window --resize top_right:-50:-50
+lalt - 0x18 : yabai -m window --resize top_right:50:50
 lcmd - left    : yabai -m window --resize top_right:-50:-0
 lcmd - down    : yabai -m window --resize top_right:0:50
 lcmd - up    : yabai -m window --resize top_right:0:-50
@@ -43,8 +43,8 @@ lalt - space : yabai -m window --toggle float
 # Make window zoom to fullscreen: shift + lalt - f
 shift + lalt - f : yabai -m window --toggle zoom-fullscreen
 
-# Make window zoom to parent node: lalt - f 
-lalt - f : yabai -m window --toggle zoom-parent
+# Make window zoom to parent node: lalt - f
+shift + lalt - z : yabai -m window --toggle zoom-parent
 
 ## Window Movement (shift + lalt - ...)
 # Moving windows in spaces: shift + lalt - {j, k, l, ö}
@@ -107,10 +107,10 @@ shift + ctrl - p : yabai -m window --focus stack.prev
 
 ## Resize (ctrl + lalt - ...)
 # Resize windows: ctrl + lalt - {j, k, l, ö}
-ctrl + lalt - left    : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
-ctrl + lalt - down    : yabai -m window --resize bottom:0:100 || yabai -m window --resize top:0:100
-ctrl + lalt - up    : yabai -m window --resize bottom:0:-100 || yabai -m window --resize top:0:-100
-ctrl + lalt - right : yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
+lalt - left    : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
+lalt - down    : yabai -m window --resize bottom:0:100 || yabai -m window --resize top:0:100
+lalt - up    : yabai -m window --resize bottom:0:-100 || yabai -m window --resize top:0:-100
+lalt - right : yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
 
 # Equalize size of windows: ctrl + lalt - e
 ctrl + lalt - e : yabai -m space --balance
