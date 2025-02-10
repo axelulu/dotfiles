@@ -20,8 +20,8 @@ lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [
 # shift + cmd - tab : yabai -m space --focus prev
 
 # resize
-lalt - 0x1B : yabai -m window --resize top_right:-50:-50
-lalt - 0x18 : yabai -m window --resize top_right:50:50
+lalt - 0x18 : yabai -m window --resize top_right:-50:-50
+lalt - 0x1B : yabai -m window --resize top_right:50:50
 lcmd - left    : yabai -m window --resize top_right:-50:-0
 lcmd - down    : yabai -m window --resize top_right:0:50
 lcmd - up    : yabai -m window --resize top_right:0:-50
