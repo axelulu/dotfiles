@@ -29,7 +29,7 @@ yabai -m config mouse_action1 move
 # set modifier + right-click drag to resize window
 yabai -m config mouse_action2 resize
 
-yabai -m config window_animation_duration 0.50
+yabai -m config window_animation_duration 0
 
 yabai -m config window_opacity_duration 0.25
 
@@ -42,7 +42,7 @@ yabai -m config window_shadow               off
 # yabai -m config active_window_border        off
 
 yabai -m config active_window_opacity       0.98
-yabai -m config normal_window_opacity       0.90
+yabai -m config normal_window_opacity       0.95
 yabai -m config split_ratio                 0.50
 
 # Not to manage these apps
