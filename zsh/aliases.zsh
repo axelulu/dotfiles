@@ -41,7 +41,8 @@ alias e_starship='nvim ~/.config/starship/starship.toml'
 alias e_bat='nvim ~/.config/bat/config'
 alias e_yabai='nvim ~/.config/yabai/yabairc'
 alias e_dots='code ~/.config'
-alias e_monica='code $HOME/Dev/ButterflyEffect/monica/'
+alias e_monica='code $HOME/Dev/ButterflyEffect/monica'
+alias e_intelli_link='code $HOME/Dev/react/intelli-link'
 
 #-------------------
 # Shortcuts
