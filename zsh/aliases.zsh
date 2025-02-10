@@ -40,7 +40,7 @@ alias e_gitconfig='nvim ~/.gitconfig'
 alias e_starship='nvim ~/.config/starship/starship.toml'
 alias e_bat='nvim ~/.config/bat/config'
 alias e_yabai='nvim ~/.config/yabai/yabairc'
-alias e_config='code ~/.config'
+alias e_dots='code ~/.config'
 alias e_monica='code $HOME/Dev/ButterflyEffect/monica/'
 
 #-------------------
@@ -116,6 +116,7 @@ alias resizeimage='~/.config/scripts/resize_image.sh'
 alias tmux_current_file='~/.config/scripts/tmux_current_file.sh'
 alias open_yazi='~/.config/scripts/open_yazi.sh'
 alias openwork='~/.config/scripts/work_setup.sh'
+alias openworkmini='~/.config/scripts/work_setup_mini_screen.sh'
 alias closework='~/.config/scripts/work_teardown.sh'
 
 # windows
@@ -147,3 +148,5 @@ alias updatealiascommand='update_alias_command'
 # Generated Aliases
 #-------------------
 alias check_net_speed='~/.config/scripts/check_wifi_speed_gui.sh'
+alias k_sketchy="kill $(ps -ef | grep /opt/homebrew/opt/sketchybar/bin/sketchybar | grep -v grep | awk 'NR==1 {print $2}')"
+alias k_sketchy_bottom="kill $(ps -ef | grep /opt/homebrew/bin/sketchy_bottombar | grep -v grep | awk 'NR==1 {print $2}')"
