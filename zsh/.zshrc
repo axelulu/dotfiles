@@ -19,6 +19,7 @@ ZSH_THEME="robbyrussell"
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/functions.zsh
 source ~/.config/zsh/git.zsh
+sh ~/.config/scripts/init_hammerspoon.sh
 
 # -------
 # Plugins
