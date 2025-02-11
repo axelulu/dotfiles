@@ -1,3 +1,4 @@
+hs.allowAppleScript(true)
 hs.window.filter.default:subscribe(hs.window.filter.windowFocused, function(window, appName)
     if appName == "WezTerm" or appName == "Code" then
         if hs.keycodes.currentSourceID() ~= "com.apple.keylayout.ABC" then

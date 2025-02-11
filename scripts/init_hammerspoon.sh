@@ -13,4 +13,5 @@ if [ ! -L "$TARGET_PATH" ]; then
     fi
     # 创建符号链接
     ln -s "$SOURCE_PATH" "$TARGET_PATH"
+    hsreload
 fi

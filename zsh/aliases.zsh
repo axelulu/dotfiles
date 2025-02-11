@@ -119,6 +119,7 @@ alias open_yazi='~/.config/scripts/open_yazi.sh'
 alias openwork='~/.config/scripts/work_setup.sh'
 alias openworkmini='~/.config/scripts/work_setup_mini_screen.sh'
 alias closework='~/.config/scripts/work_teardown.sh'
+alias hsreload="osascript -e 'tell application \"Hammerspoon\" to execute lua code \"hs.reload()\"'"
 
 # windows
 alias focus_window='~/.config/scripts/windows/focus_window.sh'
