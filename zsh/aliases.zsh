@@ -72,8 +72,6 @@ alias n="nnn"
 alias net="gping www.google.com -c '#88C0D0,#B48EAD,#81A1C1,#8FBCBB'"
 alias tree="tre"
 
-
-
 #-------------------
 # CLI Utilities
 # ------------------
@@ -90,7 +88,8 @@ alias e="~/.config/scripts/nvim_wrapper.sh"
 alias gg='lazygit'
 alias gst='git status'
 alias gco='git checkout'
-alias gcom='git checkout main'
+alias gcom='git checkout master'
+alias gcod='git checkout dev'
 alias gcob='git checkout -b'
 alias gcm='git commit -m'
 alias gcam='git commit --all -m'
