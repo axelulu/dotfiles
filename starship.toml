@@ -74,7 +74,7 @@ detect_extensions = ["py"]
 version_format = "v${major}.${minor}"
 #
 #
-# [nodejs] 
+# [nodejs]
 # format = "via [ $version](bold italic green) "
 # detect_files = ["package.json", ".node-version"]
 # detect_folders = ["node_modules"]

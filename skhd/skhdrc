@@ -14,7 +14,7 @@ lalt - b : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [
 lalt - c : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[12] ]] && yabai -m space --focus $SPACES[12]
 lalt - d : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[13] ]] && yabai -m space --focus $SPACES[13]
 lalt - e : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[14] ]] && yabai -m space --focus $SPACES[14]
-lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] && yabai -m space --focus $SPACES[15]
+# lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] && yabai -m space --focus $SPACES[15]
 
 # cmd - tab : yabai -m space --focus next
 # shift + cmd - tab : yabai -m space --focus prev
@@ -41,10 +41,18 @@ lalt - pagedown : yabai -m window --focus  last
 lalt - space : yabai -m window --toggle float
 
 # Make window zoom to fullscreen: shift + lalt - f
-shift + lalt - f : yabai -m window --toggle zoom-fullscreen
+lalt - f : yabai -m window --toggle zoom-fullscreen
 
 # Make window zoom to parent node: lalt - f
-shift + lalt - z : yabai -m window --toggle zoom-parent
+lalt - z : yabai -m window --toggle zoom-parent
+
+cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+
+# open qutebrowser
+lalt + shift - return : ~/.config/scripts/qtb.sh
+
+# open mpv
+shift + cmd - m : open -na /Applications/mpv.app $(pbpaste)
 
 ## Window Movement (shift + lalt - ...)
 # Moving windows in spaces: shift + lalt - {j, k, l, ö}
@@ -85,8 +93,8 @@ shift + lalt - d : SPACES=($(yabai -m query --displays --display | jq '.spaces[]
                   && yabai -m window --space $SPACES[13]
 shift + lalt - e : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[14] ]] \
                   && yabai -m window --space $SPACES[14]
-shift + lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] \
-                  && yabai -m window --space $SPACES[15]
+# shift + lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] \
+#                   && yabai -m window --space $SPACES[15]
 shift + lalt - p : yabai -m window --space prev && yabai -m space --focus prev
 shift + lalt - n : yabai -m window --space next && yabai -m space --focus next
 
