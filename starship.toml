@@ -7,7 +7,7 @@ format = """
  [ 󰊠  ](bold italic #ff5c5c) \ 
  [](bg:#769ff0 fg:#769ff0)$directory\
  [](bold italic skyblue)$git_branch$python$golang$nodejs 
- [\n  ](#ff6699)$character
+ [\n ](#ff6699)$character
 """
 # ~/.config/starship.toml
 [directory.substitutions]
