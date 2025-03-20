@@ -14,6 +14,12 @@ TEMP_FILE_AGE=10             # 临时文件保留天数
 BROWSER_CACHE_CLEAN=true     # 是否清理浏览器缓存
 DEEP_CLEAN=true              # 是否执行深度清理
 
+# 如果不是 Arch Linux，打印错误信息并退出
+if ! check_arch_linux; then
+  echo "错误: 此脚本只能在 Arch Linux 系统上运行。" >&2
+  exit 1
+fi
+
 # 输出彩色信息的函数
 print_info() {
     echo -e "\e[1;34m[信息]\e[0m $1" | tee -a "$LOG_FILE"
