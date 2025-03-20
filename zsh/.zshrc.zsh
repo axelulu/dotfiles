@@ -22,6 +22,7 @@ source ~/.config/zsh/git.zsh
 # Plugins
 # -------
 plugins=(
+    z
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
