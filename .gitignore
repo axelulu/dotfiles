@@ -2,3 +2,6 @@ clash/
 raycast/
 bleachbit/
 thefuck/__pycache__/
+# Ignore zsh completion dumps
+.zcompdump-*
+.zcompdump-*.zwc

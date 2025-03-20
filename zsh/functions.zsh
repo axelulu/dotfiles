@@ -193,3 +193,23 @@ function update_alias_command() {
     echo "Failed to update command"
   fi
 }
+
+# 获取当前 Git 分支名称
+git_branch_name() {
+  # 尝试使用 git symbolic-ref 获取分支名称（对于正常分支）
+  local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  
+  # 如果上面的命令失败（例如在分离头指针状态下），则使用 git rev-parse 获取
+  if [ -z "$branch" ]; then
+    branch=$(git rev-parse --short HEAD 2>/dev/null)
+    # 添加前缀，表明这是一个分离的 HEAD
+    if [ -n "$branch" ]; then
+      branch="detached-${branch}"
+    else
+      # 如果仍然失败，可能不在 git 仓库中
+      branch="not-a-git-repo"
+    fi
+  fi
+  
+  echo "$branch"
+}
