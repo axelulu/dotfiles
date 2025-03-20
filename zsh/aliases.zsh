@@ -151,3 +151,6 @@ alias updatealiascommand='update_alias_command'
 alias check_net_speed='~/.config/scripts/check_wifi_speed_gui.sh'
 alias k_sketchy="kill $(ps -ef | grep /opt/homebrew/opt/sketchybar/bin/sketchybar | grep -v grep | awk 'NR==1 {print $2}')"
 alias k_sketchy_bottom="kill $(ps -ef | grep /opt/homebrew/bin/sketchy_bottombar | grep -v grep | awk 'NR==1 {print $2}')"
+alias png2webp="~/.config/scripts/png2Webp/png2Webp.sh"
+alias code_replace='code . -r'
+alias next-agent='cd /Users/axelu/Dev/ButterflyEffect/next-agent'

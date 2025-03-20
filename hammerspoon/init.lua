@@ -1,6 +1,7 @@
 hs.allowAppleScript(true)
 hs.window.filter.default:subscribe(hs.window.filter.windowFocused, function(window, appName)
-    if appName == "WezTerm" or appName == "Code" then
+    print("当前焦点应用: " .. appName)
+    if appName == "kitty" or appName == "Code" then
         if hs.keycodes.currentSourceID() ~= "com.apple.keylayout.ABC" then
             hs.keycodes.currentSourceID("com.apple.keylayout.ABC") -- 切换到英文输入法
         end
