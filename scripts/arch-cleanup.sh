@@ -15,7 +15,7 @@ BROWSER_CACHE_CLEAN=true     # 是否清理浏览器缓存
 DEEP_CLEAN=true              # 是否执行深度清理
 
 # 如果不是 Arch Linux，打印错误信息并退出
-if ! check_arch_linux; then
+if ! is_arch_linux; then
   echo "错误: 此脚本只能在 Arch Linux 系统上运行。" >&2
   exit 1
 fi
