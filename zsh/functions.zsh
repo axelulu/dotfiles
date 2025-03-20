@@ -198,7 +198,7 @@ function update_alias_command() {
 git_branch_name() {
   # 尝试使用 git symbolic-ref 获取分支名称（对于正常分支）
   local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
-  
+
   # 如果上面的命令失败（例如在分离头指针状态下），则使用 git rev-parse 获取
   if [ -z "$branch" ]; then
     branch=$(git rev-parse --short HEAD 2>/dev/null)
@@ -210,6 +210,31 @@ git_branch_name() {
       branch="not-a-git-repo"
     fi
   fi
-  
+
   echo "$branch"
+}
+
+# 检查是否是 Arch Linux 系统
+is_arch_linux() {
+  # 方法 1: 检查 /etc/os-release 文件
+  if [ -f /etc/os-release ]; then
+    if grep -q "ID=arch" /etc/os-release; then
+      return 0  # 是 Arch Linux
+    fi
+  fi
+
+  # 方法 2: 检查 pacman 命令是否存在
+  if command -v pacman &>/dev/null; then
+    # 进一步验证是否是 Arch 的 pacman
+    if pacman -V 2>/dev/null | grep -q "Pacman v"; then
+      return 0  # 是 Arch Linux
+    fi
+  fi
+
+  # 方法 3: 检查 /etc/arch-release 文件是否存在
+  if [ -f /etc/arch-release ]; then
+    return 0  # 是 Arch Linux
+  fi
+
+  return 1  # 不是 Arch Linux
 }
