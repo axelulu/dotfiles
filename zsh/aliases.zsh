@@ -98,7 +98,7 @@ alias gaa='git add -A'
 alias gpo='git pull'
 alias gpsup='git push --set-upstream origin $(git_branch_name)'
 alias ghpr='open_github_pr'
-alias gdc='git diff main | pbcopy && echo "Diff copied to clipboard."'
+alias gdc='git diff master | pbcopy && echo "Diff copied to clipboard."'
 
 #-------------------
 # Scripts
