@@ -24,11 +24,11 @@ source ~/.config/zsh/git.zsh
 plugins=(
     z
     git
-    zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-autocomplete
+    zsh-autosuggestions
 )
-ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-search expand-or-complete accept-line push-line-or-edit)
+# ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-search expand-or-complete accept-line push-line-or-edit)
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

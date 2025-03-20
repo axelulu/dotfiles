@@ -59,7 +59,6 @@ alias rm='rm_confirm'
 alias ff="nvim \$(fzf --preview 'bat --style=numbers --color=always {}' --preview-window '~3')"
 alias cat='bat'
 alias ls='lsd'
-alias cd='z'
 alias lsl='lsd -l'
 alias lsa='lsd -a'
 alias lsla='lsd -la'
