@@ -154,4 +154,4 @@ alias k_sketchy_bottom="kill $(ps -ef | grep /opt/homebrew/bin/sketchy_bottombar
 alias png2webp="~/.config/scripts/png2Webp/png2Webp.sh"
 alias code_replace='code . -r'
 alias next-agent='cd /Users/axelu/Dev/ButterflyEffect/next-agent'
-alias arch_clear_system='sudo /home/axelu/.config/scripts/arch-cleanup.sh'
+alias arch_clear_system='sudo ~/.config/scripts/arch-cleanup.sh'
