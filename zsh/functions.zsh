@@ -223,15 +223,7 @@ is_arch_linux() {
     fi
   fi
 
-  # 方法 2: 检查 pacman 命令是否存在
-  if command -v pacman &>/dev/null; then
-    # 进一步验证是否是 Arch 的 pacman
-    if pacman -V 2>/dev/null | grep -q "Pacman v"; then
-      return 0  # 是 Arch Linux
-    fi
-  fi
-
-  # 方法 3: 检查 /etc/arch-release 文件是否存在
+  # 方法 2: 检查 /etc/arch-release 文件是否存在
   if [ -f /etc/arch-release ]; then
     return 0  # 是 Arch Linux
   fi
