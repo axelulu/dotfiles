@@ -14,6 +14,23 @@ TEMP_FILE_AGE=10             # 临时文件保留天数
 BROWSER_CACHE_CLEAN=true     # 是否清理浏览器缓存
 DEEP_CLEAN=true              # 是否执行深度清理
 
+# 检查是否是 Arch Linux 系统
+is_arch_linux() {
+  # 方法 1: 检查 /etc/os-release 文件
+  if [ -f /etc/os-release ]; then
+    if grep -q "ID=arch" /etc/os-release; then
+      return 0  # 是 Arch Linux
+    fi
+  fi
+
+  # 方法 2: 检查 /etc/arch-release 文件是否存在
+  if [ -f /etc/arch-release ]; then
+    return 0  # 是 Arch Linux
+  fi
+
+  return 1  # 不是 Arch Linux
+}
+
 # 如果不是 Arch Linux，打印错误信息并退出
 if ! is_arch_linux; then
   echo "错误: 此脚本只能在 Arch Linux 系统上运行。" >&2

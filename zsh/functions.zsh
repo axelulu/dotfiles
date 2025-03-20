@@ -213,20 +213,3 @@ git_branch_name() {
 
   echo "$branch"
 }
-
-# 检查是否是 Arch Linux 系统
-is_arch_linux() {
-  # 方法 1: 检查 /etc/os-release 文件
-  if [ -f /etc/os-release ]; then
-    if grep -q "ID=arch" /etc/os-release; then
-      return 0  # 是 Arch Linux
-    fi
-  fi
-
-  # 方法 2: 检查 /etc/arch-release 文件是否存在
-  if [ -f /etc/arch-release ]; then
-    return 0  # 是 Arch Linux
-  fi
-
-  return 1  # 不是 Arch Linux
-}
