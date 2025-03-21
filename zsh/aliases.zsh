@@ -154,3 +154,4 @@ alias png2webp="~/.config/scripts/png2Webp/png2Webp.sh"
 alias code_replace='code . -r'
 alias next-agent='cd /Users/axelu/Dev/ButterflyEffect/next-agent'
 alias clear_arch_linux='sudo ~/.config/scripts/arch-cleanup.sh'
+alias arch_clear_app='sudo ~/.config/scripts/arch_clear_app.sh'
