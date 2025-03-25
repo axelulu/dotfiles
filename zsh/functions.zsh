@@ -225,7 +225,11 @@ ssh() {
         kitty @ set-window-title "ssh: $*"
     fi
     # 执行 SSH 命令
-    command ssh "$@"
-    # 恢复原始标题
-    exit
+    command kitty +kitten ssh "$@"
+}
+
+ssh_drag() {
+  echo "请将文件拖入终端..."
+  read file_path
+  bash /path/to/ssh_executor.sh "$file_path"
 }
