@@ -231,5 +231,5 @@ ssh() {
 ssh_drag() {
   echo "请将文件拖入终端..."
   read file_path
-  bash /path/to/ssh_executor.sh "$file_path"
+  ~/.config/scripts/ssh_executor.sh "$file_path"
 }
