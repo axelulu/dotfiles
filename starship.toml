@@ -4,7 +4,7 @@ right_format = """$cmd_duration$battery$aws"""
 
 add_newline = true
 format = """
- [ 󰊠  ](bold italic #ff5c5c) \ 
+ [ 󰊠  ](bold italic #30aaff) \ 
  [](bg:#769ff0 fg:#769ff0)$directory\
  [](bold italic skyblue)$git_branch$python$golang$nodejs 
  [\n ](#ff6699)$character
@@ -37,16 +37,16 @@ format = 'via [$symbol($version )]($style)'
 #
 # # Replace the "❯"
 [character]
-success_symbol = "[󰋇 ](#ff6699)"
+success_symbol = "[󰋇 ](#30aaff)"
 error_symbol = "[󰒲 ](red)"
 #
 # # configure directory
 [directory]
 read_only = " "
-format = "[ ](#ff5c5c)[ $path]($style)[$lock_symbol]($lock_style )[ ](bold #ff5c5c) "
+format = "[ ](#30aaff)[ $path]($style)[$lock_symbol]($lock_style )[ ](bold #30aaff) "
 truncation_length = 10
 truncate_to_repo = true                                                                 # truncates directory to root folder if in github repo
-style = "italic fg:#e3e5e5 bg:#ff5c5c"
+style = "italic fg:#e3e5e5 bg:#30aaff"
 #
 [os]
 format = " ($style)"
