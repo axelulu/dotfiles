@@ -218,13 +218,6 @@ git_branch_name() {
 ssh() {
     # 提取 IP 地址
     ip=$(echo "$*" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
-    # 如果找到 IP 地址，则使用它作为标题；否则使用完整命令
-    if [ -n "$ip" ]; then
-        kitty @ set-window-title "$ip"
-    else
-        kitty @ set-window-title "ssh: $*"
-    fi
-    # 执行 SSH 命令
     command kitty +kitten ssh "$@"
 }
 
