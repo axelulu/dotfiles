@@ -1,0 +1,47 @@
+{
+  "profiles" : [
+    {
+      "id" : "F92518E6-5E50-4409-84B9-7BBC9C4C628A",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
+            }
+          ],
+          "display" : "U27P10",
+          "id" : "F096D0AF-BA1D-4D29-8992-2B7C08020676",
+          "name" : "浏览器"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
+            }
+          ],
+          "display" : "U27P10",
+          "id" : "77C13B28-CA26-4264-8C98-A81164708633",
+          "name" : "code"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "net.kovidgoyal.kitty",
+              "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
+              "name" : "kitty"
+            }
+          ],
+          "display" : "U27P10",
+          "id" : "26A70D54-57C3-459C-B3D5-64A8DFBAF365",
+          "name" : "ssh"
+        }
+      ]
+    }
+  ],
+  "selectedProfileId" : "F92518E6-5E50-4409-84B9-7BBC9C4C628A"
+}

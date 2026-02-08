@@ -14,7 +14,7 @@ lalt - b : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [
 lalt - c : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[12] ]] && yabai -m space --focus $SPACES[12]
 lalt - d : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[13] ]] && yabai -m space --focus $SPACES[13]
 lalt - e : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[14] ]] && yabai -m space --focus $SPACES[14]
-lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] && yabai -m space --focus $SPACES[15]
+# lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] && yabai -m space --focus $SPACES[15]
 
 # cmd - tab : yabai -m space --focus next
 # shift + cmd - tab : yabai -m space --focus prev
@@ -41,10 +41,18 @@ lalt - pagedown : yabai -m window --focus  last
 lalt - space : yabai -m window --toggle float
 
 # Make window zoom to fullscreen: shift + lalt - f
-shift + lalt - f : yabai -m window --toggle zoom-fullscreen
+lalt - f : yabai -m window --toggle zoom-fullscreen
 
-# Make window zoom to parent node: lalt - f 
-lalt - f : yabai -m window --toggle zoom-parent
+# Make window zoom to parent node: lalt - f
+lalt - z : yabai -m window --toggle zoom-parent
+
+cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+
+# open qutebrowser
+lalt + shift - return : ~/.config/scripts/qtb.sh
+
+# open mpv
+shift + cmd - m : open -na /Applications/mpv.app $(pbpaste)
 
 ## Window Movement (shift + lalt - ...)
 # Moving windows in spaces: shift + lalt - {j, k, l, ö}
@@ -85,8 +93,8 @@ shift + lalt - d : SPACES=($(yabai -m query --displays --display | jq '.spaces[]
                   && yabai -m window --space $SPACES[13]
 shift + lalt - e : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[14] ]] \
                   && yabai -m window --space $SPACES[14]
-shift + lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] \
-                  && yabai -m window --space $SPACES[15]
+# shift + lalt - f : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[15] ]] \
+#                   && yabai -m window --space $SPACES[15]
 shift + lalt - p : yabai -m window --space prev && yabai -m space --focus prev
 shift + lalt - n : yabai -m window --space next && yabai -m space --focus next
 
@@ -107,10 +115,10 @@ shift + ctrl - p : yabai -m window --focus stack.prev
 
 ## Resize (ctrl + lalt - ...)
 # Resize windows: ctrl + lalt - {j, k, l, ö}
-ctrl + lalt - left    : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
-ctrl + lalt - down    : yabai -m window --resize bottom:0:100 || yabai -m window --resize top:0:100
-ctrl + lalt - up    : yabai -m window --resize bottom:0:-100 || yabai -m window --resize top:0:-100
-ctrl + lalt - right : yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
+lalt - left    : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
+lalt - down    : yabai -m window --resize bottom:0:100 || yabai -m window --resize top:0:100
+lalt - up    : yabai -m window --resize bottom:0:-100 || yabai -m window --resize top:0:-100
+lalt - right : yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
 
 # Equalize size of windows: ctrl + lalt - e
 ctrl + lalt - e : yabai -m space --balance
@@ -127,8 +135,8 @@ shift + ctrl + lalt - right : yabai -m window --insert east
 shift + ctrl + lalt - s : yabai -m window --insert stack
 
 # New window in hor./ vert. splits for all applications with yabai
-lalt - s : yabai -m window --insert east;  skhd -k "cmd - n"
+lalt - s : yabai -m window --insert east; skhd -k "cmd - n"
 lalt - v : yabai -m window --insert south; skhd -k "cmd - n"
 
 # Toggle sketchybar
-shift + lalt - space : sketchybar --bar hidden=toggle
+shift + lalt - space : sketchybar --bar hidden=toggle && sketchy_bottombar --bar hidden=toggle

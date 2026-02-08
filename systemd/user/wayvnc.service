@@ -1,0 +1,17 @@
+[Unit]
+Description=WayVNC Wayland VNC Server
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Environment=WAYLAND_DISPLAY=wayland-1
+Environment=XDG_RUNTIME_DIR=/run/user/%U
+ExecStart=/usr/bin/wayvnc -C /home/axelu/.config/wayvnc/config
+# ExecStart=/usr/bin/wayvnc -r 0.0.0.0 5900
+certificate_file=tls_cert.pem
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
+
