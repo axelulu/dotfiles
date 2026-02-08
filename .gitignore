@@ -1,8 +1,30 @@
+# macOS
+.DS_Store
+
+# Backups
+*.backup
+
+# Zsh
+.zcompdump-*
+.zcompdump-*.zwc
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Credentials & tokens (security)
+gcloud/
+gh/
+neonctl/
+configstore/
+
+# Auto-generated / runtime data
 clash/
 raycast/
 bleachbit/
-thefuck/__pycache__/
-# Ignore zsh completion dumps
-.zcompdump-*
-.zcompdump-*.zwc
+better-auth/
 Thunar/
+iterm2/AppSupport
+
+# OpenCode (auto-generated)
+opencode/
