@@ -1,35 +1,56 @@
-# -----------------------------
-# Environment and Path Settings
-# -----------------------------
-export BAT_THEME="Nord"
+# ==========================
+# Oh My Zsh
+# ==========================
 export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(z git zsh-syntax-highlighting zsh-autocomplete zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
-export TERM="xterm-256color"  # proper colors# Set name of the theme to
+
+# ==========================
+# Environment
+# ==========================
+export TERM="xterm-256color"
 export EDITOR='nvim'
 export VISUAL='nvim'
+export BAT_THEME="Nord"
 export ZSH_DOTENV_PROMPT=false
 export VIRTUAL_ENV_DISABLE_PROMPT=0
-ZSH_THEME="robbyrussell"
 
-# --------------
-# zsh Extensions
-# --------------
+# ==========================
+# Custom Config
+# ==========================
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/functions.zsh
 source ~/.config/zsh/git.zsh
 
-# -------
-# Plugins
-# -------
-plugins=(
-    z
-    git
-    zsh-syntax-highlighting
-    zsh-autocomplete
-    zsh-autosuggestions
-)
-# ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-search expand-or-complete accept-line push-line-or-edit)
+# ==========================
+# Shell Tools
+# ==========================
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
+
+# ==========================
+# NVM
+# ==========================
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# ==========================
+# Bun
+# ==========================
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# ==========================
+# PATH
+# ==========================
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# ==========================
+# Secrets (not tracked by git)
+# ==========================
+[ -f "$HOME/.env" ] && source "$HOME/.env"
