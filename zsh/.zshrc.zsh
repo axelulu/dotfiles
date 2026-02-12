@@ -7,6 +7,12 @@ plugins=(z git zsh-syntax-highlighting zsh-autocomplete zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # ==========================
+# Terminal Switcher
+# ==========================
+source ~/.config/terminal.conf
+export TERMINAL TERMINAL_APP TERMINAL_BIN TERMINAL_CONFIG
+
+# ==========================
 # Environment
 # ==========================
 export TERM="xterm-256color"

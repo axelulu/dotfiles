@@ -46,7 +46,7 @@ lalt - f : yabai -m window --toggle zoom-fullscreen
 # Make window zoom to parent node: lalt - f
 lalt - z : yabai -m window --toggle zoom-parent
 
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+cmd - return : source ~/.config/terminal.conf && open -na "$TERMINAL_APP"
 
 # open qutebrowser
 lalt + shift - return : ~/.config/scripts/qtb.sh

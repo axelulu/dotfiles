@@ -1,3 +1,4 @@
 #!/bin/bash
+source ~/.config/terminal.conf
 
-cd ~ && /Applications/WezTerm.app/Contents/MacOS/wezterm -e yazi
+cd ~ && "$TERMINAL_BIN" -e yazi

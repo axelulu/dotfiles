@@ -1,3 +1,4 @@
 #!/bin/bash
+source ~/.config/terminal.conf
 
-/Applications/WezTerm.app/Contents/MacOS/wezterm start --cwd ~ yazi &
+open -a "$TERMINAL_APP" && "$TERMINAL_BIN" -e yazi &

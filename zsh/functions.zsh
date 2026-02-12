@@ -216,9 +216,11 @@ git_branch_name() {
 
 # SSH 函数，自动修改标题并在结束后恢复
 kssh() {
-    # 提取 IP 地址
-    ip=$(echo "$*" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
-    command kitty +kitten ssh "$@"
+    if [[ "$TERMINAL" == "kitty" ]]; then
+        command kitty +kitten ssh "$@"
+    else
+        command ssh "$@"
+    fi
 }
 
 ssh_drag() {

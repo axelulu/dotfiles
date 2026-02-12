@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 # Description: This script is used to setup the workspaces and apps for work mode
 
+source ~/.config/terminal.conf
+
 # Get open apps
 open_apps=$(osascript ~/.config/scripts/scpts/all_running_app.scpt)
 # separate the open_apps string by comma into an array
@@ -10,7 +12,7 @@ open_apps=(${(s:, :)open_apps})
 typeset -A work_apps
 work_apps=(
   ["Finder"]=1
-  ["WezTerm"]=1
+  ["$TERMINAL_APP"]=1
   ["Visual Studio Code"]=1
   ["Google Chrome"]=2
   ["Lark"]=2
@@ -46,7 +48,7 @@ done
 
 SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[1] ]] && yabai -m space --focus $SPACES[1]
 yabai -m space --balance
-open -a "WezTerm"
+open -a "$TERMINAL_APP"
 yabai -m window --resize right:-600:0 || yabai -m window --resize left:-600:0
 
 SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[2] ]] && yabai -m space --focus $SPACES[2]
